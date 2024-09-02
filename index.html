@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="de-paseo-por-el-corazon-humano-b.webp" alt="Foto" class="photo">
+            <div class="text">¿Quieres casarte conmigo?</div>
+            <div class="buttons">
+                <button id="yes-btn" class="btn btn-yes">Sí</button>
+                <button id="no-btn" class="btn btn-no">No</button>
+            </div>
+            <div id="response" class="response"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('yes-btn').addEventListener('click', function() {
+            window.location.href = 'yes.html'; // Redirige a la página yes.html
+        });
+
+        document.getElementById('no-btn').addEventListener('click', function() {
+            const button = document.getElementById('no-btn');
+            const box = document.querySelector('.box');
+            const boxWidth = box.clientWidth;
+            const boxHeight = box.clientHeight;
+            const buttonWidth = button.clientWidth;
+            const buttonHeight = button.clientHeight;
+
+            const maxX = boxWidth - buttonWidth;
+            const maxY = boxHeight - buttonHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            button.style.position = 'absolute';
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>

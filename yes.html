@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Aceptada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="1.avif" alt="Imagen Linda" class="photo">
+            <div class="text">¡Qué emocionante! Gracias por decir que sí.</div>
+            <div class="buttons">
+                <button id="return-btn" class="btn btn-return">Volver</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('return-btn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Regresa a la página principal
+        });
+    </script>
+</body>
+</html>
